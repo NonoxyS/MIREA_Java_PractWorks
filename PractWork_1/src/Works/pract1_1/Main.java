@@ -9,6 +9,7 @@ public class Main {
         int n = in.nextInt();
         int [] array = new int[n];
         int summ = 0;
+        System.out.print("Введите числа через пробел: ");
         for (int i = 0; i < n; i++)
         {
             array[i] = in.nextInt();

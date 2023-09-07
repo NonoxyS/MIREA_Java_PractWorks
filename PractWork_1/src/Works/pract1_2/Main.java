@@ -10,7 +10,7 @@ public class Main {
         int n = in.nextInt();
         int [] array = new int[n];
         int min_numb = Integer.MAX_VALUE, max_numb = Integer.MIN_VALUE, i = 0, summ = 0;
-        System.out.printf("Введите %d чисел через пробел: ", n);
+        System.out.print("Введите числа через пробел: ");
         while (i < n)
         {
             array[i] = in.nextInt();
