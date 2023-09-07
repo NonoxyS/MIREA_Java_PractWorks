@@ -9,7 +9,8 @@ public class Main {
         System.out.print("Введите размер массива: ");
         int n = in.nextInt();
         int [] array = new int[n];
-        int min_numb = 0, max_numb = 0, i = 0, summ = 0;
+        int min_numb = Integer.MAX_VALUE, max_numb = Integer.MIN_VALUE, i = 0, summ = 0;
+        System.out.printf("Введите %d чисел через пробел: ", n);
         while (i < n)
         {
             array[i] = in.nextInt();
