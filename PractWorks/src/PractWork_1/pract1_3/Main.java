@@ -1,4 +1,4 @@
-package Works.pract1_3;
+package PractWork_1.pract1_3;
 
 public class Main {
     public static void main(String[] args)

@@ -1,4 +1,4 @@
-package Works.pract1_5;
+package PractWork_1.pract1_5;
 
 import java.util.Scanner;
 
