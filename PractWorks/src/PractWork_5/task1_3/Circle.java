@@ -43,7 +43,9 @@ public class Circle extends Shape{
     @Override
     public String ToString()
     {
-        return String.format("Area: %.2f\nPerimetr: %.2f\nColor: %s\nIsFilled: %s",
-                getArea(), getPerimetr(), getColor(), isFilled());
+        return String.format("Area: %.2f" +
+                "\nPerimetr: %.2f" +
+                "\nColor: %s" +
+                "\nIsFilled: %b", getArea(), getPerimetr(), getColor(), isFilled());
     }
 }

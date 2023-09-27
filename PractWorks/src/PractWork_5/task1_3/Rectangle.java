@@ -1,7 +1,7 @@
 package PractWork_5.task1_3;
 
 public class Rectangle extends Shape {
-    protected double width, length;
+    private double width, length;
 
     public Rectangle()
     {
@@ -12,14 +12,26 @@ public class Rectangle extends Shape {
     public Rectangle(double width, double length)
     {
         super();
-        this.width = width;
-        this.length = length;
+        if (width > length) {
+            this.width = length;
+            this.length = width;
+        }
+        else {
+            this.length = length;
+            this.length = length;
+        }
     }
     public Rectangle(String color, boolean filled, double width, double length)
     {
         super(color, filled);
-        this.width = width;
-        this.length = length;
+        if (width > length) {
+            this.width = length;
+            this.length = width;
+        }
+        else {
+            this.length = length;
+            this.length = length;
+        }
     }
 
     public double getWidth() {
@@ -53,6 +65,9 @@ public class Rectangle extends Shape {
     @Override
     public String ToString()
     {
-        return String.format("Area: %.2f\nPerimetr: %.2f", getArea(), getPerimetr());
+        return String.format("Area: %.2f" +
+                "\nPerimetr: %.2f" +
+                "\nColor: %s" +
+                "\nIsFilled: %b", getArea(), getPerimetr(), getColor(), isFilled());
     }
 }
