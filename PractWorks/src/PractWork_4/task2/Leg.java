@@ -1,2 +1,4 @@
-package PractWork_4.task2;public class Leg {
+package PractWork_4.task2;
+
+public class Leg {
 }
