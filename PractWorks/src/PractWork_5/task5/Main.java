@@ -1,11 +1,12 @@
-package PractWork_5.task4;
+package PractWork_5.task5;
+
+import PractWork_5.task4.MovableCircle;
 
 public class Main {
     public static void main(String[] args) {
-        MovableCircle circle = new MovableCircle(2, 5, 1, 1, 1);
-
-        System.out.println(circle.ToString());
-        circle.MoveUp();
-        System.out.println("\n" + circle.ToString());
+        MovableRectangle rectangle = new MovableRectangle(-3, 3, 0, 0, 1, 1);
+        System.out.println(rectangle.ToString());
+        rectangle.MoveUp();
+        System.out.println("\n" + rectangle.ToString());
     }
 }

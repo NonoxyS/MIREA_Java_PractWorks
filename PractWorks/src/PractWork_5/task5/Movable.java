@@ -1,4 +1,4 @@
-package PractWork_5.task4;
+package PractWork_5.task5;
 
 public interface Movable {
     public void MoveUp();

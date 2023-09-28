@@ -1,4 +1,4 @@
-package PractWork_5.task4;
+package PractWork_5.task5;
 
 public class MovablePoint implements Movable {
      int x, y, xSpeed, ySpeed;
