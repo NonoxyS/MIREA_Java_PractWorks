@@ -19,16 +19,14 @@ public class Animation extends JPanel implements ActionListener {
 
     public Animation() {
         frames = new BufferedImage[65];
-
-        // Загрузка кадров изображения
         for (int i = 0; i < frames.length; i++) {
-            String imagePath = "gifka/gif(" + i + 1 + ").jpg";
+            String imagePath = "gifka/gif(" + (i + 1) + ").jpg";
             frames[i] = loadImage(imagePath);
         }
 
         currentFrameIndex = 0;
 
-        timer = new Timer(200, this);
+        timer = new Timer(50, this);
         timer.start();
     }
 
@@ -36,7 +34,7 @@ public class Animation extends JPanel implements ActionListener {
         BufferedImage image = null;
         try
         {
-            image = ImageIO.read(new File(imagePath));
+            image = ImageIO.read(getClass().getResource(imagePath));
         }
         catch (IOException e)
         {

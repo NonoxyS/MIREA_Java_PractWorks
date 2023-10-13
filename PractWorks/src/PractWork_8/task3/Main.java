@@ -12,7 +12,6 @@ public class Main {
 
             Animation animation = new Animation();
             frame.add(animation);
-
             frame.setVisible(true);
         });
     }
