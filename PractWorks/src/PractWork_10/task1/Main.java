@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int maxnumb = getMaxNumber(in, 0);
-        System.out.println("Максимальное число: " + maxnumb);
+        triangleSequence(1, 10);
     }
 
     public static void triangleSequence(int n, int k)
     {
-        for (int i = n; i <= k; i++)
+        for (int i = 0; i < n; i++)
         {
-            System.out.print(i);
+            System.out.print(n + " ");
         }
 
         if (n == k)
             return;
+        System.out.print("| ");
+        triangleSequence(n + 1, k);
     }
 }
