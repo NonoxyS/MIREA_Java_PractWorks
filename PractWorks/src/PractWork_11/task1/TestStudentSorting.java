@@ -12,9 +12,8 @@ public class TestStudentSorting {
 
         System.out.println("Исходный массив:");
         printStudents(students);
-
+        
         insertionSort(students);
-
         System.out.println("Отсортированный массив:");
         printStudents(students);
     }
@@ -23,16 +22,13 @@ public class TestStudentSorting {
 
         for (int i = 1; i < students.length; i++)
         {
+            Student key = students[i];
             int j = i - 1;
-
-            while (j >= 0 && students[j].getiDNumber() > students[i].getiDNumber()) {
+            while (j >= 0 && students[j].getiDNumber() > key.getiDNumber()) {
                 students[j + 1] = students[j];
                 j--;
             }
-
-            if (j + 1 != i) {
-                students[j + 1] = students[i];
-            }
+            students[j + 1] = key;
         }
     }
 
