@@ -26,9 +26,9 @@ public class MergeSort {
         l1[2] = new Student("Maria", 345);
 
         Student[] l2 = new Student[3];
-        l2[0] = new Student("Alexey", 225); // should be l2, not l1
-        l2[1] = new Student("Artem", 175); // should be l2, not l1
-        l2[2] = new Student("Daniil", 100); // should be l2, not l1
+        l2[0] = new Student("Alexey", 225);
+        l2[1] = new Student("Artem", 175);
+        l2[2] = new Student("Daniil", 100);
 
         Student[] mergedList = mergeSort(l1, l2);
 
