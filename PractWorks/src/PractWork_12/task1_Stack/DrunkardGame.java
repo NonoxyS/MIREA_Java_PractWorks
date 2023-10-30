@@ -1,4 +1,4 @@
-package PractWork_12.task1;
+package PractWork_12.task1_Stack;
 
 import java.util.Scanner;
 import java.util.ArrayDeque;
@@ -23,7 +23,7 @@ public class DrunkardGame {
             int player1Card = player1Deck.pop();
             int player2Card = player2Deck.pop();
 
-            if (player1Card > player2Card) {
+            if (player1Card > player2Card & (player1Card != 9 & player2Card != 0)) {
                 player1Deck.add(player1Card);
                 player1Deck.add(player2Card);
             }
