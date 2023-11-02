@@ -1,7 +1,8 @@
-package PractWork_12.task1_Stack;
+package PractWork_12;
 
 import java.util.Scanner;
-import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class DrunkardGame {
     public static void main(String[] args) {
@@ -9,19 +10,19 @@ public class DrunkardGame {
         String player1Cards = scanner.nextLine();
         String player2Cards = scanner.nextLine();
 
-        ArrayDeque<Integer> player1Deck = new ArrayDeque<>();
-        ArrayDeque<Integer> player2Deck = new ArrayDeque<>();
+        Queue<Integer> player1Deck = new LinkedList<>();
+        Queue<Integer> player2Deck = new LinkedList<>();
 
-        for (int i = 4; i >= 0; i--) {
-            player1Deck.push(Integer.parseInt(player1Cards.substring(i, i + 1)));
-            player2Deck.push(Integer.parseInt(player2Cards.substring(i, i + 1)));
+        for (int i = 0; i < 5; i++) {
+            player1Deck.offer(Integer.parseInt(player1Cards.substring(i, i + 1)));
+            player2Deck.offer(Integer.parseInt(player2Cards.substring(i, i + 1)));
         }
 
         int moves = 0;
 
         while (moves < 106) {
-            int player1Card = player1Deck.pop();
-            int player2Card = player2Deck.pop();
+            int player1Card = player1Deck.remove();
+            int player2Card = player2Deck.remove();
 
             if (player1Card > player2Card & (player1Card != 9 & player2Card != 0)) {
                 player1Deck.add(player1Card);
