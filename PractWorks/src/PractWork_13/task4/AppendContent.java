@@ -1,7 +1,6 @@
 package PractWork_13.task4;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class AppendContent {
