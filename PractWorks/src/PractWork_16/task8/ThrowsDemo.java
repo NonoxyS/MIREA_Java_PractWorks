@@ -15,11 +15,11 @@ public class ThrowsDemo {
             }
         }
     }
-    public static void printDetails(String key) throws Exception{
+    public static void printDetails(String key) throws Exception {
             String message = getDetails(key);
             System.out.println(message);
     }
-    private static String getDetails(String key) throws Exception{
+    private static String getDetails(String key) throws Exception {
         if ("".equals(key)) {
             throw new Exception("Key set to empty string");
         }
