@@ -12,6 +12,6 @@ public class Animal implements Nameable {
 
     @Override
     public String getName() {
-        return String.format("Car: %s\nAge: %d", name, age);
+        return String.format("Name: %s\nAge: %d", name, age);
     }
 }
