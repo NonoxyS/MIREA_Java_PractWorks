@@ -27,21 +27,22 @@ public class Matrix <T> {
         }
     }
 
-    public T[][] addition(T[][] matrice) {
+    public void addition(T[][] matrice) {
         try {
             if ((matrice.length != this.matrice.length) || (matrice[0].length != this.matrice[0].length)) {
                 throw new IllegalArgumentException("Sizes of matrices are not equals");
             }
             for (int i = 0; i < matrice.length; i++) {
                 for (int j = 0; j < matrice[i].length; j++) {
-                    this.matrice[i][j] = (T) add((Number)this.matrice[i][j], (Number)matrice[i][j]);
+                    if (matrice[i][j] instanceof Number)
+                        this.matrice[i][j] = (T) add((Number)this.matrice[i][j], (Number)matrice[i][j]);
+                    if (matrice[i][j] instanceof String)
+                        this.matrice[i][j] = (T) ((String) this.matrice[i][j]).concat((String) matrice[i][j]);
                 }
             }
-            return matrice;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-        return null;
     }
 
     private Number add(Number a, Number b) {
@@ -63,12 +64,32 @@ public class Matrix <T> {
                 {"E", "E", "E"},
                 {"E", "E", "E"}};
 
+        Integer[][] newIntMatrice = {
+                {2, 2, 2},
+                {2, 2, 2},
+                {2, 2, 2}};
+
+        String[][] newStrMatrice = {
+                {"Z", "Z", "Z"},
+                {"Z", "Z", "Z"},
+                {"Z", "Z", "Z"}};
+
         Matrix<Integer> intMatrixObj = new Matrix<>(intMatrice);
         intMatrixObj.printMatrice();
 
         System.out.println();
 
         Matrix<String> strMatrixObj = new Matrix<>(strMatrice);
+        strMatrixObj.printMatrice();
+
+        System.out.println();
+
+        intMatrixObj.addition(newIntMatrice);
+        intMatrixObj.printMatrice();
+
+        System.out.println();
+
+        strMatrixObj.addition(newStrMatrice);
         strMatrixObj.printMatrice();
     }
 }
